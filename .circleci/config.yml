@@ -28,6 +28,7 @@ jobs:
       - node/install-packages:
           pkg-manager: yarn
           cache-key: "yarn.lock"
+      - my-orb/my_command
   test:
     parallelism: 3
     docker:
