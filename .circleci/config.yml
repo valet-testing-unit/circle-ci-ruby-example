@@ -10,6 +10,7 @@ orbs:
           - run: echo "Run my tests"
     jobs:
       my_job:
+        executor: node/default
         steps:
           - checkout
           - my_command
