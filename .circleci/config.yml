@@ -2,7 +2,21 @@ version: 2.1
 
 orbs:
   ruby: circleci/ruby@1.1.0
-  node: circleci/node@2
+  my-orb:
+    orbs:
+      node: circleci/node@3.0
+    commands:
+      my_command:
+        steps:
+          - run: echo "Run my tests"
+    jobs:
+      my_job:
+        executor: node/default # Node orb executor
+        steps:
+          - checkout
+          - my_command
+          - store_test_results:
+              path: test-results
 
 jobs:
   build:
