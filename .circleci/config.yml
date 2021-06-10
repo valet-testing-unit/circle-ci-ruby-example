@@ -2,6 +2,7 @@ version: 2.1
 
 orbs:
   ruby: circleci/ruby@1.1.0
+  node: circleci/node@3.0
   my-orb:
     orbs:
       node: circleci/node@3.0
